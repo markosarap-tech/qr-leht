@@ -29,11 +29,26 @@ body {
   margin:0;
   height:100vh;
   display:flex;
+  flex-direction: column;
   justify-content:center;
   align-items:center;
   font-family:Arial;
   background:#111;
   color:white;
+  text-align:center;
+  padding:20px;
+}
+
+.text {
+  font-size:20px;
+  margin-bottom:25px;
+  opacity:0.9;
+}
+
+.big {
+  font-size:28px;
+  font-weight:bold;
+  margin-bottom:10px;
 }
 
 button {
@@ -49,6 +64,12 @@ button {
 </head>
 
 <body>
+
+<div class="big">LY</div>
+
+<div class="text">
+teil on täpselt <b>2 minutit</b> sihtkohta jõudmiseks!
+</div>
 
 <button onclick="startAll()">
 ▶ START
