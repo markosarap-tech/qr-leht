@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nav + muusika</title>
+<title>Marsruut + muusika</title>
 
 <script>
-let audioStarted = false;
 let audio;
 
 function startAll() {
-  // Maps
+  // 🎵 sinu GitHubi lugu
+  audio = new Audio("https://raw.githubusercontent.com/markosarap/repo/main/minu_lugu.mp3");
+  audio.loop = true;
+  audio.volume = 0.8;
+
+  audio.play().catch(() => {
+    console.log("Brauser blokeeris autoplay");
+  });
+
+  // 📍 Maps
   window.location.href =
     "https://www.google.com/maps/dir/?api=1&origin=Tartu+M%C3%A4nguasjamuuseum,+Tartu&destination=Jakobi+19,+Tartu";
-
-  // Muusika
-  if (!audioStarted) {
-    audio = new Audio("https://drive.google.com/file/d/1byy0uswVqxex1m4rQDsAkerKdnTCKCNs/preview");
-    audio.loop = true;
-    audio.play().catch(() => {});
-    audioStarted = true;
-  }
 }
 </script>
 
@@ -32,7 +32,7 @@ body {
   justify-content:center;
   align-items:center;
   font-family:Arial;
-  background:#222;
+  background:#111;
   color:white;
 }
 
@@ -45,12 +45,13 @@ button {
   color:white;
 }
 </style>
+
 </head>
 
 <body>
 
 <button onclick="startAll()">
-▶ Alusta teekonda + muusika
+▶ Alusta muusika + marsruut
 </button>
 
 </body>
