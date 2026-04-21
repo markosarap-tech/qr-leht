@@ -1,13 +1,57 @@
-# Account
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nav + muusika</title>
 
-Get started with your GitHub account.
+<script>
+let audioStarted = false;
+let audio;
 
-## About your GitHub account
+function startAll() {
+  // Maps
+  window.location.href =
+    "https://www.google.com/maps/dir/?api=1&origin=Tartu+M%C3%A4nguasjamuuseum,+Tartu&destination=Jakobi+19,+Tartu";
 
-Your account is the foundation of your GitHub identity. It controls your access to repositories, organizations, and GitHub features, and manages your personal settings and preferences.
+  // Muusika
+  if (!audioStarted) {
+    audio = new Audio("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3");
+    audio.loop = true;
+    audio.play().catch(() => {});
+    audioStarted = true;
+  }
+}
+</script>
 
-## Next steps
+<style>
+body {
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:Arial;
+  background:#222;
+  color:white;
+}
 
-* For conceptual information about accounts, see [Personal account management](/en/account-and-profile/concepts/personal-account-management).
-* For information about managing your account, see [How-tos for your GitHub account and profile](/en/account-and-profile/how-tos/setting-up-and-managing-your-personal-account-on-github).
-* For reference information, see [Personal account reference](/en/account-and-profile/reference/personal-account-reference).
+button {
+  font-size:22px;
+  padding:18px 28px;
+  border:none;
+  border-radius:12px;
+  background:#1a73e8;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<button onclick="startAll()">
+▶ Alusta teekonda + muusika
+</button>
+
+</body>
+</html>
