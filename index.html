@@ -1,27 +1,76 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-  <meta charset="UTF-8">
-  <title>QR leht</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigeeri</title>
 
-  <script>
-    function openBoth() {
-      // avab Google Maps
-      window.open("https://www.google.com/maps/dir/?api=1&origin=Tartu+M%C3%A4nguasjamuuseum,+Tartu&destination=Jakobi+19,+Tartu");
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e9ecef, #dfe4ea);
+  }
 
-      // avab video
-      window.open("https://drive.google.com/uc?export=download&id=1byy0uswVqxex1m4rQDsAkerKdnTCKCNs");
-    }
-  </script>
+  .card {
+    text-align: center;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-size: 22px;
+    padding: 18px 30px;
+    border: none;
+    border-radius: 12px;
+    background: #1a73e8;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  .small {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+  }
+</style>
+
+<script>
+function startNavigation() {
+  const url =
+    "https://www.google.com/maps/dir/?api=1&origin=Tartu+M%C3%A4nguasjamuuseum,+Tartu&destination=Jakobi+19,+Tartu";
+
+  window.location.href = url;
+}
+</script>
+
 </head>
 
-<body style="font-family: Arial; text-align: center; padding: 40px;">
+<body>
 
-  <h2>Tartu Mänguasjamuuseum → Jakobi 19</h2>
+<div class="card">
+  <h1>📍 Alusta navigeerimist</h1>
 
-  <button onclick="openBoth()" style="font-size:20px; padding:15px 25px;">
-    ▶ Ava kõik
+  <button onclick="startNavigation()">
+    Ava marsruut
   </button>
+
+  <div class="small">
+    Tartu Mänguasjamuuseum → Jakobi 19
+  </div>
+</div>
 
 </body>
 </html>
